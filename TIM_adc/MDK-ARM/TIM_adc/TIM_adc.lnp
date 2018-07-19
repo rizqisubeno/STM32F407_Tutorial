@@ -1,0 +1,26 @@
+--cpu Cortex-M4.fp
+"tim_adc\startup_stm32f407xx.o"
+"tim_adc\main.o"
+"tim_adc\stm32f4xx_it.o"
+"tim_adc\stm32f4xx_hal_msp.o"
+"tim_adc\stm32f4xx_hal_adc.o"
+"tim_adc\stm32f4xx_hal_adc_ex.o"
+"tim_adc\stm32f4xx_hal_tim.o"
+"tim_adc\stm32f4xx_hal_tim_ex.o"
+"tim_adc\stm32f4xx_hal_rcc.o"
+"tim_adc\stm32f4xx_hal_rcc_ex.o"
+"tim_adc\stm32f4xx_hal_flash.o"
+"tim_adc\stm32f4xx_hal_flash_ex.o"
+"tim_adc\stm32f4xx_hal_flash_ramfunc.o"
+"tim_adc\stm32f4xx_hal_gpio.o"
+"tim_adc\stm32f4xx_hal_dma_ex.o"
+"tim_adc\stm32f4xx_hal_dma.o"
+"tim_adc\stm32f4xx_hal_pwr.o"
+"tim_adc\stm32f4xx_hal_pwr_ex.o"
+"tim_adc\stm32f4xx_hal_cortex.o"
+"tim_adc\stm32f4xx_hal.o"
+"tim_adc\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "TIM_adc\TIM_adc.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "TIM_adc.map" -o TIM_adc\TIM_adc.axf
