@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"pwm&readpwmsig\startup_stm32f407xx.o"
+"pwm&readpwmsig\main.o"
+"pwm&readpwmsig\stm32f4xx_it.o"
+"pwm&readpwmsig\stm32f4xx_hal_msp.o"
+"pwm&readpwmsig\stm32f4xx_hal_tim.o"
+"pwm&readpwmsig\stm32f4xx_hal_tim_ex.o"
+"pwm&readpwmsig\stm32f4xx_hal_rcc.o"
+"pwm&readpwmsig\stm32f4xx_hal_rcc_ex.o"
+"pwm&readpwmsig\stm32f4xx_hal_flash.o"
+"pwm&readpwmsig\stm32f4xx_hal_flash_ex.o"
+"pwm&readpwmsig\stm32f4xx_hal_flash_ramfunc.o"
+"pwm&readpwmsig\stm32f4xx_hal_gpio.o"
+"pwm&readpwmsig\stm32f4xx_hal_dma_ex.o"
+"pwm&readpwmsig\stm32f4xx_hal_dma.o"
+"pwm&readpwmsig\stm32f4xx_hal_pwr.o"
+"pwm&readpwmsig\stm32f4xx_hal_pwr_ex.o"
+"pwm&readpwmsig\stm32f4xx_hal_cortex.o"
+"pwm&readpwmsig\stm32f4xx_hal.o"
+"pwm&readpwmsig\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "PWM&readPWMsig\PWM&readPWMsig.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PWM&readPWMsig.map" -o PWM&readPWMsig\PWM&readPWMsig.axf

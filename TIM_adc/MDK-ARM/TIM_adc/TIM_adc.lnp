@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp
+--cpu=Cortex-M4.fp
 "tim_adc\startup_stm32f407xx.o"
 "tim_adc\main.o"
 "tim_adc\stm32f4xx_it.o"
@@ -21,6 +21,6 @@
 "tim_adc\stm32f4xx_hal.o"
 "tim_adc\system_stm32f4xx.o"
 --library_type=microlib --strict --scatter "TIM_adc\TIM_adc.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "TIM_adc.map" -o TIM_adc\TIM_adc.axf

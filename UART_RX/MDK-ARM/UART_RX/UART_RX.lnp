@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"uart_rx\startup_stm32f407xx.o"
+"uart_rx\main.o"
+"uart_rx\stm32f4xx_it.o"
+"uart_rx\stm32f4xx_hal_msp.o"
+"uart_rx\dma_circular.o"
+"uart_rx\stm32f4xx_hal_tim.o"
+"uart_rx\stm32f4xx_hal_tim_ex.o"
+"uart_rx\stm32f4xx_hal_uart.o"
+"uart_rx\stm32f4xx_hal_rcc.o"
+"uart_rx\stm32f4xx_hal_rcc_ex.o"
+"uart_rx\stm32f4xx_hal_flash.o"
+"uart_rx\stm32f4xx_hal_flash_ex.o"
+"uart_rx\stm32f4xx_hal_flash_ramfunc.o"
+"uart_rx\stm32f4xx_hal_gpio.o"
+"uart_rx\stm32f4xx_hal_dma_ex.o"
+"uart_rx\stm32f4xx_hal_dma.o"
+"uart_rx\stm32f4xx_hal_pwr.o"
+"uart_rx\stm32f4xx_hal_pwr_ex.o"
+"uart_rx\stm32f4xx_hal_cortex.o"
+"uart_rx\stm32f4xx_hal.o"
+"uart_rx\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "UART_RX\UART_RX.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "UART_RX.map" -o UART_RX\UART_RX.axf
