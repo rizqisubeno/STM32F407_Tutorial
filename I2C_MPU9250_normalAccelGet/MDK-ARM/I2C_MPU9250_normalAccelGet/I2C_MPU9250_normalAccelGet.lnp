@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"i2c_mpu9250_normalaccelget\startup_stm32f407xx.o"
+"i2c_mpu9250_normalaccelget\main.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_it.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_msp.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_i2c.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_i2c_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_tim.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_tim_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_rcc.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_rcc_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_flash.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_flash_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_flash_ramfunc.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_gpio.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_dma_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_dma.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_pwr.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_pwr_ex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal_cortex.o"
+"i2c_mpu9250_normalaccelget\stm32f4xx_hal.o"
+"i2c_mpu9250_normalaccelget\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "I2C_MPU9250_normalAccelGet\I2C_MPU9250_normalAccelGet.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "I2C_MPU9250_normalAccelGet.map" -o I2C_MPU9250_normalAccelGet\I2C_MPU9250_normalAccelGet.axf

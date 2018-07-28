@@ -1,0 +1,1 @@
+i2c_mpu9250_normalaccelget\startup_stm32f407xx.o: startup_stm32f407xx.s
