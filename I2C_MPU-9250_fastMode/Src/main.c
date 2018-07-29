@@ -120,7 +120,6 @@ int main(void)
 
         /* USER CODE END 2 */
 
-
         /* Infinite loop */
         /* USER CODE BEGIN WHILE */
         while (1)
@@ -154,7 +153,7 @@ int main(void)
 						sum +=  deltat;
 						sumCount++;
 						
-						MadgwickQuaternionUpdate(ax,ay,az,gx*3.14159265358979323846f/180.0f,gy*3.14159265358979323846f/180.0f,gz*3.14159265358979323846f/180.0f,mx,my,mz);
+						MadgwickQuaternionUpdate(ax,ay,az,gx*3.14159265358979323846f/180.0f,gy*3.14159265358979323846f/180.0f,gz*3.14159265358979323846f/180.0f,my,mx,mz);
 					
 						delt_t = HAL_GetTick() - count;
 						if(delt_t > 500) 
