@@ -52,6 +52,7 @@ I2C_HandleTypeDef hi2c1;
 uint8_t I2CBuff[2],temp[2];
 float sum = 0;
 uint32_t sumCount = 0;
+extern const float PI;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 #define INT_STATUS       0x3A
@@ -153,11 +154,12 @@ int main(void)
 						sum +=  deltat;
 						sumCount++;
 						
-						MadgwickQuaternionUpdate(ax,ay,az,gx*3.14159265358979323846f/180.0f,gy*3.14159265358979323846f/180.0f,gz*3.14159265358979323846f/180.0f,my,mx,mz);
+						MadgwickQuaternionUpdate(ax,ay,az,gx*PI/180.0f,gy*PI/180.0f,gz*PI/180.0f,my,mx,mz);
 					
 						delt_t = HAL_GetTick() - count;
 						if(delt_t > 500) 
 						{
+							HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_0);
 							//insert output LCD or something in the here
 							tempCount = readTempData();
 							temperature = ((float) tempCount)/333.87f + 21.0f; //temperature in degrees Centigrade
@@ -287,18 +289,18 @@ static void MX_GPIO_Init(void)
         GPIO_InitTypeDef GPIO_InitStruct;
 
         /* GPIO Ports Clock Enable */
-        __HAL_RCC_GPIOD_CLK_ENABLE();
+        __HAL_RCC_GPIOE_CLK_ENABLE();
         __HAL_RCC_GPIOB_CLK_ENABLE();
 
         /*Configure GPIO pin Output Level */
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_0, GPIO_PIN_RESET);
 
         /*Configure GPIO pin : PD15 */
-        GPIO_InitStruct.Pin = GPIO_PIN_15;
+        GPIO_InitStruct.Pin = GPIO_PIN_0;
         GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-        GPIO_InitStruct.Pull = GPIO_NOPULL;
-        GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-        HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+        GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+        GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+        HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
 }
 
